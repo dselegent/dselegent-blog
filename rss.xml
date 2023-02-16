@@ -6,8 +6,8 @@
     <link>https://blog.dselegent.cf/</link>
     <description>开源工具、效率方法的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 10 Feb 2023 14:29:15 GMT</pubDate>
-    <lastBuildDate>Fri, 10 Feb 2023 14:29:15 GMT</lastBuildDate>
+    <pubDate>Thu, 16 Feb 2023 06:41:25 GMT</pubDate>
+    <lastBuildDate>Thu, 16 Feb 2023 06:41:25 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright by dselegent</copyright>
@@ -16,6 +16,199 @@
       <url>https://blog.dselegent.cf/logo.png</url>
       <link>https://blog.dselegent.cf/</link>
     </image>
+    <item>
+      <title>01 【Git 提交规范】</title>
+      <link>https://blog.dselegent.cf/tool/lint/01.html</link>
+      <guid>https://blog.dselegent.cf/tool/lint/01.html</guid>
+      <source url="https://blog.dselegent.cf/rss.xml">01 【Git 提交规范】</source>
+      <description>01 【Git 提交规范】 1.Git提交规范（Commitizen） 1.1 背景 Git是目前世界上最先进的分布式版本控制系统，在我们平时的项目开发中已经广泛使用。而当我们使用Git提交代码时，都需要写Commit Message提交说明才能够正常提交。 git commit -m &amp;quot;提交&amp;quot;</description>
+      <pubDate>Thu, 16 Feb 2023 06:38:14 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 01 【Git 提交规范】</h1>
+<h2> 1.Git提交规范（Commitizen）</h2>
+<h3> 1.1 背景</h3>
+<p>Git是目前世界上最先进的分布式版本控制系统，在我们平时的项目开发中已经广泛使用。而当我们使用Git提交代码时，都需要写Commit Message提交说明才能够正常提交。</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>然而，我们平时在编写提交说明时，通常会直接填写如"fix"或"bug"等不规范的说明，不规范的提交说明很难让人明白这次代码提交究竟是为了什么。而在工作中，一份清晰简介规范的Commit Message能让后续代码审查、信息查找、版本回退都更加高效可靠。因此我们需要一些工具来约束开发者编写符合规范的提交说明。</p>
+<h3> 1.2 提交规范</h3>
+<p>那么，什么样的提交说明才能符合规范的说明呢？不同的团队可以制定不同的规范，当然，我们也可以直接使用目前流行的规范，比如<a href="https://zj-git-guide.readthedocs.io/zh_CN/latest/message/Angular%E6%8F%90%E4%BA%A4%E4%BF%A1%E6%81%AF%E8%A7%84%E8%8C%83/" target="_blank" rel="noopener noreferrer">Angular Git Commit Guidelines</a>。接下来将会对目前流行的Angular提交规范进行介绍。</p>
+<h4> 提交格式</h4>
+<p>符合规范的Commit Message的提交格式如下，包含了页眉（header）、正文（body）和页脚（footer）三部分。其中，header是必须的，body和footer可以忽略。</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> 页眉设置</h4>
+<p>页眉（header）通常只有一行，包括了提交类型（type）、作用域（scope）和主题（subject）。其中，type和subject是必须的，scope是可选的。</p>
+<p><strong>提交类型</strong></p>
+<p>提交类型（type）用于说明此次提交的类型，需要指定为下面其中一个：</p>
+<figure><img src="https://article.biliimg.com/bfs/article/25c25024576908442687ed7bd9ec508b13b6be0c.png" alt="image-20230212220159594" tabindex="0" loading="lazy"><figcaption>image-20230212220159594</figcaption></figure>
+<p><strong>作用域</strong></p>
+<p>作用域（scope）表示此次提交影响的范围。比如可以取值api，表明只影响了接口。</p>
+<p><strong>主题</strong></p>
+<p>主题（subject）描述是简短的一句话，简单说明此次提交的内容。</p>
+<h4> 正文和页脚</h4>
+<p>正文（body）和页眉（footer）这两部分不是必须的。</p>
+<p>如果是破坏性的变更，那就必须在提交的正文或脚注加以展示。一个破坏性变更必须包含大写的文本 BREAKING CHANGE，紧跟冒号和空格。脚注必须只包含 BREAKING CHANGE、外部链接、issue 引用和其它元数据信息。例如修改了提交的流程，依赖了一些包，可以在正文写上：BREANKING CHANGE：需要重新npm install，使用npm run cm代替git commit。</p>
+<p>下面给出了一个Commit Message例子，该例子中包含了header和body。</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>当然，在平时的提交中，我们也可以只包含header，比如我们修改了登录页面的某个功能，那么可以这样写Commit Message。</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 1.3 Commitizen</h3>
+<p>虽然有了规范，但是还是无法保证每个人都能够遵守相应的规范，因此就需要使用一些工具来保证大家都能够提交符合规范的Commit Message。常用的工具包括了可视化工具和信息交互工具，其中Commitizen是常用的Commitizen工具，接下来将会先介绍Commitizen的使用方法。</p>
+<h4> 什么是Commitizen</h4>
+<p><a href="https://github.com/commitizen/cz-cli" target="_blank" rel="noopener noreferrer">Commitizen</a>是一个撰写符合上面Commit Message标准的一款工具，可以帮助开发者提交符合规范的Commit Message。</p>
+<h4> 安装Commitizen</h4>
+<p>可以使用npm安装Commitizen。其中，cz-conventional-changelog是本地适配器。</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h4> 配置Commitizen</h4>
+<p>安装好Commitizen之后，就需要配置Commitizen，我们需要在package.json中加入以下代码。其中，需要增加一个script，使得我们可以通过执行npm run cm来代替git commit，而path为cz-conventional-changelog包相对于项目根目录的路径。</p>
+<div class="language-json line-numbers-mode" data-ext="json"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>其实这个可以全局安装，这样我们所有地方都可以用</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>配置完成之后，我们就可以通过执行npm run cm来代替git commit，接着只需要安装提示，完成header、body和footer的编写，就能够编写出符合规范的Commit Message。</p>
+<figure><img src="https://article.biliimg.com/bfs/article/ee3c890b2c596ad7f0a2bd6d1839e082f9fc1f08.png" alt="image-20230212220930672" tabindex="0" loading="lazy"><figcaption>image-20230212220930672</figcaption></figure>
+<h2> 2.Git工作流规范（Husky ）</h2>
+<h3> 2.1 背景</h3>
+<p>有些同学可能会把ESLint、Stylelint或Commitizen提示的错误忽视不见，直接将代码提交到代码仓库中。这样做的话，那么其他同学在pull代码并diff代码时可能会出现大段代码标红，同时在进行CI时又可能因为代码风格或规范问题被打回重改。</p>
+<p>那么，有没有一种方法，让大家在提交代码时需要确保本地的代码或Commit Message已经通过检查才能够push到代码仓库，从而更好的保障代码质量呢？接下来，将会介绍如何使用Husky + Commintlint + Lint-staged打造规范的Git检查工作流，确保我们的代码只有符合规范才能提交到代码仓库。</p>
+<h3> 2.2 什么是git hook</h3>
+<p>在介绍Husky之前，我们先来看什么是git hook，也就是常说的Git钩子。</p>
+<p>和其它版本控制系统一样，Git能在特定的重要动作发生时触发自定义脚本。有两组这样的钩子：客户端的和服务器端的。 客户端钩子由诸如提交和合并这样的操作所调用，而服务器端钩子作用于诸如接收被推送的提交这样的联网操作。 你可以随心所欲地运用这些钩子。</p>
+<p>其中，客户端钩子我们可能用的比较多，客户端钩子通常包括了提交工作流钩子、电子邮件工作流钩子和其它钩子。这些钩子通常存储在项目的.git/hooks目录下，我们需要关注的主要是提交工作流钩子。提交工作流钩子主要包括了以下四种：</p>
+<ul>
+<li>
+<p>pre-commit：该钩子在键入提交信息前运行。 它用于检查即将提交的快照。如果该钩子以非零值退出，Git 将放弃此次提交，你可以利用该钩子，来检查代码风格是否一致。</p>
+</li>
+<li>
+<p>prepare-commit-msg：该钩子在启动提交信息编辑器之前，默认信息被创建之后运行。 它允许你编辑提交者所看到的默认信息。</p>
+</li>
+<li>
+<p>commit-msg：该钩子接收一个参数，此参数存有当前提交信息的临时文件的路径。 如果该钩子脚本以非零值退出，Git 将放弃提交，因此，可以用来在提交通过前验证项目状态或提交信息。</p>
+</li>
+<li>
+<p>post-commit：该钩子一般用于通知之类的事情。</p>
+<p>在上面的钩子中，我们需要关注pre-commit和commit-msg钩子。</p>
+</li>
+</ul>
+<h3> 2.3 什么是husky</h3>
+<p><a href="https://github.com/typicode/husky" target="_blank" rel="noopener noreferrer">husky</a>是常见的git hook工具，使用husky可以挂载Git钩子，当我们本地进行git commit或git push等操作前，能够执行其它一些操作，比如进行ESLint检查，如果不通过，就不允许commit或push。</p>
+<h3> 2.4 安装husky</h3>
+<p>安装husky，可以使用npm进行安装。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 2.5 配置husky</h3>
+<p>安装好husky之后，还需要对husky进行配置。不同版本的husky配置方法有些不同。</p>
+<ol>
+<li>安装 husky git hooks</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2">
+<li>测试 husky 钩子作用，添加 pre-commit 钩子</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>我们需要安装配置好ESLint或Stylelint，并且在 <code>pre-commit</code> 中加入以下代码。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>接着，当我们执行git commit时，就会触发pre-commit钩子，并且执行对应命令，这里将会指定目录下的文件进行ESLint检查，如果ESLint检查不通过，是无法进行commit的。</p>
+<figure><img src="https://article.biliimg.com/bfs/article/914bd4db9e59aab4cee16b65998131af6d162b99.png" alt="image-20230212221721568" tabindex="0" loading="lazy"><figcaption>image-20230212221721568</figcaption></figure>
+<p>如果ESLint检查通过，就可以正常进行commit。</p>
+<figure><img src="https://article.biliimg.com/bfs/article/5aaaa1287862843e69b499d50e3ce3b69734cf78.png" alt="image-20230212221733767" tabindex="0" loading="lazy"><figcaption>image-20230212221733767</figcaption></figure>
+<p>在安装并配置好husky之后，如果发现在commit时不能触发pre-commit，可以试着重新安装husky，并且重启VSCode。</p>
+<h3> 2.6 只使用husky的问题</h3>
+<p>使用husky虽然能够帮助我们在commit或push前执行一些指令，但是如果只使用husky，仍然存在下面这些问题：</p>
+<ul>
+<li>
+<p>在某次提交时，我们只修改了某个文件，但是只使用husky会把所有的文件都运行一遍Lint检查，时间成本太高。此外，有些项目会在中途才加上husky，但是在commit时husky也会对其它未修改的历史代码进行检查，可能会一下子报了很多错误，这个时候我们更希望只对当前修改过的文件进行检查，而不是对项目中的代码都进行检查。</p>
+</li>
+<li>
+<p>husky的钩子只能执行一个指令，但是有时候我们希望能够在git commit之前执行多个指令，比如执行ESLint、Stylelint或Commitlint等操作。</p>
+<p>为了解决上面的问题，就需要结合Lint-staged一起使用。</p>
+</li>
+</ul>
+<h2> 3.Git工作流规范（Lint-staged）</h2>
+<h3> 3.1 什么是Lint-staged</h3>
+<p><a href="https://github.com/okonet/lint-staged" target="_blank" rel="noopener noreferrer">Lint-staged</a>可以在git staged阶段的文件上执行Linters，简单说就是当我们运行ESlint或Stylelint命令时，可以通过设置指定只检查我们通过git add添加到暂存区的文件，可以避免我们每次检查都把整个项目的代码都检查一遍，从而提高效率。</p>
+<p>其次，Lint-staged允许指定不同类型后缀文件执行不同指令的操作，并且可以按步骤再额外执行一些其它shell指令。</p>
+<p>安装Lint-staged，可以使用npm进行安装。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 3.2 配置Lint-staged</h3>
+<p>安装好了Lint-staged之后，就需要配置Lint-staged。我们可以在package.json中加入以下代码，这里需要先安装配置好husky，ESLint和Stylelint。</p>
+<p><code>.lintstagedrc.js</code></p>
+<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><code>package.json</code></p>
+<div class="language-json line-numbers-mode" data-ext="json"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><code>pre-commit</code></p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>当我们执行git commit时，就会触发husky的pre-commit钩子，调用lint-staged命令。而lint-staged包含了对*.vue，<em>.{js,jsx,ts,tsx}，</em>.{htm,html,css,sss,less,scss,sass}类型文件的操作。以*.vue为例，当匹配到后缀名为.vue的文件时，就会分别执行以下操作：</p>
+<ul>
+<li>首先会执行eslint --fix命令，对.vue文件执行ESLint检查，并且自动修复一些JS格式问题</li>
+<li>接着会执行stylelint --fix命令，对.vue文件的CSS执行Stylelint检查，并且自动修复一些CSS格式问题</li>
+<li>最后，若前面的指令都执行通过，那么将加入到本地的git commit中，如果没有执行通过，那么将不能commit</li>
+</ul>
+<h2> 4.Git工作流规范（Commitlint）</h2>
+<p>除了在commit前对JS和CSS执行ESLint和Stylelint检查之外，也可以对Commit Message进行检查。接下来，将会介绍Commitlint的安装和配置方法。</p>
+<h3> 4.1 什么是Commitlint</h3>
+<p>在使用Git提交代码时，通常都需要填写提交说明，也就是Commit Message。在前面的文章中，已经介绍了如何使用Commitizen或可视化工具编写符合规范的Commit Message。然而有些同学可能还是会使用git commit方式提交一些不符合规范的Commit Message。为了禁止不符合规范的Commit Message的提交，我们就需要采用一些工具，只有当开发者编写了符合规范的Commit Message才能够进行commit。而<a href="https://commitlint.js.org/#/" target="_blank" rel="noopener noreferrer">Commitlint</a>就是这样一种工具，通过结合husky一起使用，可以在开发者进行commit前就对Commit Message进行检查，只有符合规范，才能够进行commit。</p>
+<h3> 4.2 安装Commitlint</h3>
+<p>使用npm安装Commitlint相关依赖包。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 4.3 配置Commitlint</h3>
+<p>安装好Commitlint之后，就需要配置Commitlint，可以在根目录创建<code>.commitlintrc.js</code>文件进行配置。</p>
+<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在comminlint.config.js中加入以下代码，表示使用config-conventional规范对提交说明进行检查。具体的规范配置可以查看：<a href="https://github.com/conventional-changelog/commitlint" target="_blank" rel="noopener noreferrer">https://github.com/conventional-changelog/commitlint</a></p>
+<p>接下来，需要在<code>.husky</code>中加入<code>commit-msg</code>钩子。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>配置好了之后，当我们进行git commit时，就会触发commit-msg钩子，执行commintlint命令，并且读取commitlint.config.js中的规则对我们的提交说明进行检查，如果校验不通过，将不能提交。</p>
+<h2> 5.cz-git</h2>
+<h3> 5.1 介绍</h3>
+<p>一款工程性更强，轻量级，高度自定义，标准输出格式的 <a href="https://github.com/commitizen/cz-cli" target="_blank" rel="noopener noreferrer">commitizen</a> 适配器</p>
+<p><strong>特点</strong></p>
+<ul>
+<li>💪 友好型命令行工具，<strong>“懒字优先”</strong> ！支持在命令行搜索和选择，减少拼写错误。</li>
+<li>⚡️ <strong>轻量级</strong>，<strong>高度自定义</strong>, 但输出格式遵循标准的 <a href="https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits" target="_blank" rel="noopener noreferrer">Angular commit</a> 规范。</li>
+<li>🔨 <a href="https://cz-git.qbb.sh/zh/recipes/#scopes" target="_blank" rel="noopener noreferrer">更好维护 monorepo 工程化项目</a> 与 <strong>commitlint</strong> 配合给予命令行的相关校验信息。</li>
+<li>✅ 支持在 commit 中添加 <strong>emoji</strong> ｜ 更好的与issue链接，尤其 <a href="https://cz-git.qbb.sh/zh/recipes/issue-prefixs.html" target="_blank" rel="noopener noreferrer">gitee</a></li>
+</ul>
+<p><strong>为什么制作了这款插件</strong></p>
+<ul>
+<li>
+<p><strong>cz-customizable</strong></p>
+<ol>
+<li>需要额外添加配置文件。</li>
+<li>仅支持上下选择是的交互方式。</li>
+<li>可支持的习惯型配置项少。</li>
+</ol>
+</li>
+<li>
+<p><strong>cz-conventional-changelog</strong></p>
+<ol>
+<li>
+<p>支持的自定义配置项少。</p>
+</li>
+<li>
+<p>交互方式不友好。</p>
+</li>
+<li>
+<p>重复性输入的东西太多。</p>
+</li>
+</ol>
+</li>
+</ul>
+<h3> 5.2 项目中使用</h3>
+<blockquote>
+<p>只需要简单的三个步骤:</p>
+</blockquote>
+<p><a href="https://cz-git.qbb.sh/zh/guide/#%E5%85%A8%E5%B1%80%E4%BD%BF%E7%94%A8" target="_blank" rel="noopener noreferrer">全局安装</a> <code>commitizen</code>,如此一来可以快速使用 <code>cz</code> 或 <code>git cz</code> 命令进行启动。</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><strong>步骤 1: 下载依赖</strong></p>
+<ul>
+<li>NPM</li>
+<li>YARN</li>
+<li>PNPM</li>
+</ul>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><strong>步骤 2: 修改 <code>package.json</code> 添加 <code>config</code> 指定使用的适配器</strong></p>
+<div class="language-json line-numbers-mode" data-ext="json"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>步骤 3: 添加自定义配置(可选，使用默认)</strong></p>
+<blockquote>
+<p>有两种配置方式</p>
+</blockquote>
+<p><strong>方式一: (推荐) cz-git 与 <a href="https://github.com/conventional-changelog/commitlint" target="_blank" rel="noopener noreferrer">commitlint</a> 进行联动给予校验信息</strong>，所以可以编写于 <a href="https://github.com/conventional-changelog/commitlint#config" target="_blank" rel="noopener noreferrer">commitlint</a> 配置文件之中。
+例如: (<a href="https://cz-git.qbb.sh/zh/config/" target="_blank" rel="noopener noreferrer">⇒ 配置模板</a>)</p>
+<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>方式二:</strong> 在 <strong>package.json</strong> 下 config.commitizen 下添加自定义配置，但过量的配置项会导致 package.json 臃肿，适合简单自定义。例如:</p>
+<div class="language-json line-numbers-mode" data-ext="json"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 5.3 全局使用</h3>
+<blockquote>
+<p>全局安装的好处在于：在任何项目下都可以利用 <code>cz</code> 或 <code>git cz</code> 命令启动命令行工具，生成标准化 commit message</p>
+</blockquote>
+<p>只需要简单的三个步骤：</p>
+<p><strong>步骤 1: 下载全局依赖</strong></p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><strong>步骤 2: 全局配置适配器类型</strong></p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><strong>步骤 3: 添加自定义配置(可选，使用默认配置)</strong></p>
+<blockquote>
+<p>有 两种 配置方式</p>
+</blockquote>
+<p><strong>方式一:</strong> 编辑 <code>~/.czrc</code> 文件以 json 形式添加配置, 例如:</p>
+<div class="language-json line-numbers-mode" data-ext="json"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>方式二: 与 <a href="https://github.com/conventional-changelog/commitlint" target="_blank" rel="noopener noreferrer">commitlint</a> 配合</strong>，在 <code>$HOME</code> 路径下创建配置文件
+(<a href="https://cz-git.qbb.sh/zh/config/" target="_blank" rel="noopener noreferrer">↓ 配置模板</a>)</p>
+<h3> 5.4 我的配置</h3>
+<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><figure><img src="https://article.biliimg.com/bfs/article/99ead6f04bba10d7799dff1c05aad0d6a3ca63a2.png" alt="image-20230212230104019" tabindex="0" loading="lazy"><figcaption>image-20230212230104019</figcaption></figure>
+]]></content:encoded>
+      <enclosure url="https://article.biliimg.com/bfs/article/25c25024576908442687ed7bd9ec508b13b6be0c.png" type="image/png"/>
+    </item>
     <item>
       <title>01 【计算机网络-概述】</title>
       <link>https://blog.dselegent.cf/professional_knowledge/computer_network/01.html</link>
@@ -4625,161 +4818,6 @@ shutdown -h +10：十分钟后关机</p>
 <p>​	Linux 系统中为了提高磁盘的读写效率，对磁盘采取了 “预读迟写”操作方式。当用户 保存文件时，Linux 核心并不一定立即将保存数据写入物理磁盘中，而是将数据保存在缓 冲区中，等缓冲区满时再写入磁盘，这种方式可以极大的提高磁盘写入数据的效率。但是， 也带来了安全隐患，如果数据还未写入磁盘时，系统掉电或者其他严重问题出现，则将导 致数据丢失。使用 sync 指令可以立即将缓冲区的数据写入磁盘。</p>
 ]]></content:encoded>
       <enclosure url="https://i0.hdslb.com/bfs/album/8f3ccb6e4eb3773f018eafbcc5958c7f307c256d.png" type="image/png"/>
-    </item>
-    <item>
-      <title>04 【实操篇-帮助命令 文件目录管理基础知识】</title>
-      <link>https://blog.dselegent.cf/back_end/linux/04.html</link>
-      <guid>https://blog.dselegent.cf/back_end/linux/04.html</guid>
-      <source url="https://blog.dselegent.cf/rss.xml">04 【实操篇-帮助命令 文件目录管理基础知识】</source>
-      <description>04 【实操篇-帮助命令 文件目录管理基础知识】 1.帮助命令 通常linux命令都十分简单，但是有些还是有些复杂度的。比如find，ps这种命令，如果要照顾到所有的场合，可能需要非常巨大的篇幅。但是，万一用到这种偏门的场合怎么办？ 全面了解一下是非常有必要的，以便在使用的时候能够唤起记忆中最浅显的印象。然后剩下的，就可以交给类似于man 的这种命令了。Linux上的每一个命令，都会有配套的帮助文件，这远比网络上那些转来转去的信息，正确的多。 正式介绍一下下面的两个命令：</description>
-      <pubDate>Mon, 30 Jan 2023 06:57:36 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 04 【实操篇-帮助命令 文件目录管理基础知识】</h1>
-<h2> 1.帮助命令</h2>
-<p>通常linux命令都十分简单，但是有些还是有些复杂度的。比如<code>find</code>，<code>ps</code>这种命令，如果要照顾到所有的场合，可能需要非常巨大的篇幅。但是，万一用到这种偏门的场合怎么办？</p>
-<p>全面了解一下是非常有必要的，以便在使用的时候能够唤起记忆中最浅显的印象。然后剩下的，就可以交给类似于<code>man </code>的这种命令了。Linux上的每一个命令，都会有配套的帮助文件，这远比网络上那些转来转去的信息，正确的多。</p>
-<p>正式介绍一下下面的两个命令：</p>
-<ul>
-<li><code>man</code> 用来显示某个命令的文档信息。比如：<code>man ls</code></li>
-<li><code>info</code> 你可以认为和man是一样的，虽然有一些能够互补的内容。它们会在内容中进行提示的</li>
-<li><code>--help</code> 很多命令通过参数<code>--help</code>提供非常简短的帮助信息。这通常是最有用最快捷的用例展示。如果你根本就记不住一个非常拗口的单词，那就找找这些地方吧</li>
-</ul>
-<blockquote>
-<p>注意：这些帮助信息，仅集中在命令的作用域本身。对于它的组合使用场景，并没有过多信息。也就是说，它教会了你怎么用，但并没有告诉你用它能够来做什么。</p>
-</blockquote>
-<blockquote>
-<h3> TAB补全</h3>
-<p>现在，在终端里，输入<code>ca</code>，然后快速按2次<code>&lt;TAB&gt;</code>键盘，命令行会进入补全模式，显示以ca打头的所有命令。</p>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果你对某个命令，只有模糊的印象，只记得前面的几个字母，这个功能是极好的，命令范围会一步步缩减。</p>
-</blockquote>
-<h2> 2.文件和目录管理基础知识</h2>
-<h3> 2.1 文件系统的层次结构</h3>
-<p>平时打交道的都是文件，那么，应该如何找到它们呢？很简单，在 Linux 操作系统中，所有的文件和目录都被组织成以一个根节点“/”开始的倒置的树状结构。</p>
-<figure><img src="https://i0.hdslb.com/bfs/album/fa695b742d612fe2cae3a2058e37bf268db12a56.png" alt="image-20220817210102283" tabindex="0" loading="lazy"><figcaption>image-20220817210102283</figcaption></figure>
-<p>其中，目录就相当于 Windows 中的文件夹，目录中存放的既可以是文件，也可以是其他的子目录，而文件中存储的是真正的信息。</p>
-<p>文件系统的最顶层是由根目录开始的，系统使用“/”来表示根目录，在根目录之下的既可以是目录，也可以是文件，而每一个目录中又可以包含（子）目录或文件。如此反复就可以构成一个庞大的文件系统。</p>
-<blockquote>
-<p>其实，使用这种树状、具有层次的文件结构主要目的是方便文件系统的管理和维护，想象一下，如果所有的文件都放在一个目录下，其文件系统的管理和维护将变成一场噩梦。</p>
-</blockquote>
-<p>现实中也有许多类似的例子，例如在整个行政管理体制中，村民就相当于文件，他们住在一个村庄中，村庄就是存储村民的目录。许多村又组成了个乡，这个乡就相当于存储村的目录，依此类推，最终就构建出了一个庞大的行政区域管理结构图。</p>
-<p>注意，目录名或文件名都是区分大小写的，如 dog、DOG 和 Dog 为 3 个不同的目录或文件。完整的目录或文件路径是由一连串的目录名所组成的，其中每一个目录由“/”来分隔。如 cat 的完整路径是 /home/cat。</p>
-<p>在文件系统中，有两个特殊的目录，一个是用户所在的工作目录，即当前目录，可用一个点“.”表示；另一个是当前目录的上一层目录，也叫父目录，用两个点“..”表示。</p>
-<blockquote>
-<p>如果一个目录或文件名是以一个点开始，就表示这个目录或文件是一个隐藏目录或文件。即以默认方式査找（后续会讲查找命令）时，不显示该目录或文件。</p>
-</blockquote>
-<p>为了方便管理和维护，Linux 系统采用了文件系统层次标准，也称为 FHS 标准，它规定了根目录下各个目录应该存在哪些类型的文件（或子目录），比如说，在 /bin 和 /sbin 目录中存放的应该是可执行文件，有关各个目录存放文件的类型。</p>
-<h3> 2.2 绝对路径和相对路径详解</h3>
-<p>在 Linux 中，简单的理解一个文件的路径，指的就是该文件存放的位置，例如， /home/cat 就表示的是 cat 文件所存放的位置。只要我们告诉 Linux 系统某个文件存放的准确位置，那么它就可以找到这个文件。</p>
-<p>指明一个文件存放的位置，有 2 种方法，分别是使用绝对路径和相对路径。</p>
-<p>我们知道，Linux 系统中所有的文件（目录）都被组织成以根目录“/”开始的倒置的树状结构。</p>
-<figure><img src="http://c.biancheng.net/uploads/allimg/190506/2-1Z5061A1003X.gif" alt="img" tabindex="0" loading="lazy"><figcaption>img</figcaption></figure>
-<p>绝对路径一定是由根目录 / 开始写起。例如，使用绝对路径的表示方式指明 bin 文件所在的位置，该路径应写为 /usr/bin，测试代码如下：</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>可以看到，如果仅传递给 Linux 系统一个文件名，它无法找到指定文件；而当将 bin 文件的绝对路径传递 Linux 系统时，它就可以成功找到。</p>
-<p>和绝对路径不同，相对路径不是从根目录 / 开始写起，而是从当前所在的工作目录开始写起。使用相对路径表明某文件的存储位置时，经常会用到前面讲到的 2 个特殊目录，即当前目录（用 . 表示）和父目录（用 .. 表示）。</p>
-<p>举个例子，当我们使用 root 身份登录 Linux 系统时，当前工作目录默认为 /root，如果此时需要将当前工作目录调整到 root 的子目录 Desktop 中，当然可以使用绝对路径，示例代码如下：</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
-<p>注意，这里所使用的 pwd 和 cd 命令，目前只需知道它们的功能即可，具体用法会在后续文章中作详细讲解。</p>
-</blockquote>
-<p>可以看到，通过使用绝对路径，我们成功地改变了当前工作路径。但除此之外，使用相对路径的方式会更简单。因为目前处于 /root 的位置，而 Desktop 就位于当前目录下，所以：</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>此代码中，./Desktop 表示的就是 Destop 文件相对于 /root 所在的路径。</p>
-<p>再举一个例子，如果以 root 身份登录 Linux 系统，并实现将当前工作目录由 /root 转换为 /usr 目录，有以下 2 种方式：</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>总之，绝对路径是相对于根路径 / 的，只要文件不移动位置，那么它的绝对路径是恒定不变的；而相对路径是相对于当前所在目录而言的，随着程序的执行，当前所在目录可能会改变，因此文件的相对路径不是固定不变的。</p>
-<h3> 2.3 文件（目录）命名规则</h3>
-<p>介绍完 Linux 系统中目录结构之后，读者一定想知道如何为文件或目录命名。</p>
-<p>我们知道，在 Linux 系统中，一切都是文件，既然是文件，就必须要有文件名。同其他系统相比，Linux 操作系统对文件或目录命名的要求相对比较宽松。</p>
-<p>Linux 系统中，文件和目录的命名规则如下：</p>
-<ol>
-<li>除了字符“/”之外，所有的字符都可以使用，但是要注意，在目录名或文件名中，使用某些特殊字符并不是明智之举。例如，在命名时应避免使用 &lt;、&gt;、？、* 和非打印字符等。如果一个文件名中包含了特殊字符，例如空格，那么在访问这个文件时就需要使用引号将文件名括起来。</li>
-<li>目录名或文件名的长度不能超过 255 个字符。</li>
-<li>目录名或文件名是区分大小写的。如 DOG、dog、Dog 和 DOg ，是互不相同的目录名或文件名，但使用字符大小写来区分不同的文件或目录，也是不明智的。</li>
-<li>与 Windows 操作系统不同，文件的扩展名对 Linux 操作系统没有特殊的含义，换句话说，Linux 系统并不以文件的扩展名开分区文件类型。例如，dog.exe 只是一个文件，其扩展名 .exe 并不代表此文件就一定是可执行文件。
-需要注意的是，在 Linux 系统中，硬件设备也是文件，也有各自的文件名称。Linux 系统内核中的 udev 设备管理器会自动对硬件设备的名称进行规范，目的是让用户通过设备文件的名称，就可以大致猜测处设备的属性以及相关信息。</li>
-</ol>
-<p>udev 设备管理器会一直以进程的形式运行，并侦听系统内核发出的信号来管理位于 /dev 目录下的设备文件。</p>
-<p>表 1 罗列出了Linux 系统中常见硬件设备的文件名。</p>
-<table>
-<thead>
-<tr>
-<th>硬件设备</th>
-<th>文件名称</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>IDE设备</td>
-<td>/dev/hd[a-d]，现在的 IDE设备已经很少见了，因此一般的硬盘设备会以 /dev/sd 开头。</td>
-</tr>
-<tr>
-<td>SCSI/SATA/U盘</td>
-<td>/dev/sd[a-p]，一台主机可以有多块硬盘，因此系统采用 a~p 代表 16 块不同的硬盘。</td>
-</tr>
-<tr>
-<td>软驱</td>
-<td>/dev/fd[0-1]</td>
-</tr>
-<tr>
-<td>打印机</td>
-<td>/dev/lp[0-15]</td>
-</tr>
-<tr>
-<td>光驱</td>
-<td>/dev/cdrom</td>
-</tr>
-<tr>
-<td>鼠标</td>
-<td>/dev/mouse</td>
-</tr>
-<tr>
-<td>磁带机</td>
-<td>/dev/st0 或 /dev/ht0</td>
-</tr>
-</tbody>
-</table>
-<h3> 2.4 命令基本格式</h3>
-<p>本节开始，我们不会再见到图形界面了，因为对服务器来讲，图形界面会占用更多的系统资源，而且会安装更多的服务、开放更多的端口，这对服务器的稳定性和安全性都有负面影响。其实，服务器是一个连显示器都没有的家伙，要图形界面干十么？</p>
-<p>说到这里，有很多人会很崩溃。笔者就经常听到抱怨 Linux 是落后于时代的老古董，就像笔者的白头发一样！但是，大家要理解，对服务器来讲，稳定性、可靠性、安全性才是最主要的。而简单易用不是服务器需要考虑的事情，所以学习 Linux，这些枯燥的命令是必须学习和记忆的内容。</p>
-<h3> 2.5 命令提示符</h3>
-<p>登录系统后，第一眼看到的内容是：</p>
-<p>[root@localhost ~]#</p>
-<p>这就是 Linux 系统的命令提示符。那么，这个提示符的含义是什么呢？</p>
-<ul>
-<li>[]：这是提示符的分隔符号，没有特殊含义。</li>
-<li>root：显示的是当前的登录用户，笔者现在使用的是 root 用户登录。</li>
-<li>@：分隔符号，没有特殊含义。</li>
-<li>localhost：当前系统的简写主机名（完整主机名是 localhost.localdomain）。</li>
-<li>~：代表用户当前所在的目录，此例中用户当前所在的目录是家目录。</li>
-<li>#：命令提示符，Linux 用这个符号标识登录的用户权限等级。如果是超级用户，提示符就是 #；如果是普通用户，提示符就是 $。</li>
-</ul>
-<p>家目录（又称主目录）是什么？ Linux 系统是纯字符界面，用户登录后，要有一个初始登录的位置，这个初始登录位置就称为用户的家：</p>
-<ul>
-<li>超级用户的家目录：/root。</li>
-<li>普通用户的家目录：/home/用户名。</li>
-</ul>
-<p>用户在自己的家目录中拥有完整权限，所以我们也建议操作实验可以放在家目录中进行。我们切换一下用户所在目录，看看有什么效果。</p>
-<p>[root@localhost ~]# cd /usr/local
-[root@localhost local]#</p>
-<p>仔细看，如果切换用户所在目录，那么命令提示符中的会变成用户当前所在目录的最后一个目录（不显示完整的所在目录 /usr/ local，只显示最后一个目录 local)。</p>
-<h3> 2.6 命令的基本格式</h3>
-<p>接下来看看 Linux 命令的基本格式:</p>
-<p><code>[root@localhost ~]# 命令[选项][参数]</code></p>
-<p>命令格式中的 [] 代表可选项，也就是有些命令可以不写选项或参数，也能执行。那么，我们就用 Linux 中最常见的 ls 命令来解释一下命令的格式（有关 ls 命令的具体用法，后续章节会详细介绍）。如果按照命令的分类，那么 ls 命令应该属于目录操作命令。</p>
-<p><code>[root@localhost ~]# ls anaconda-ks.cfg install.log install.log.syslog</code></p>
-<h4> 2.6.1 选项的作用</h4>
-<p>ls 命令之后不加选项和参数也能执行，不过只能执行最基本的功能，即显示当前目录下的文件名。那么加入一个选项，会出现什么结果？</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果加一个"-l"选项，则可以看到显示的内容明显增多了。"-l"是长格式（long list）的意思，也就是显示文件的详细信息。至于 "-l" 选项的具体含义，我们稍后再详细讲解。可以看到选项的作用是调整命令功能。如果没有选项，那么命令只能执行最基本的功能；而一旦有选项，则可以显示更加丰富的数据。</p>
-<p>Linux 的选项又分为短格式选项（-l）和长格式选项（--all）。短格式选项是英文的简写，用一个减号调用，例如：</p>
-<p><code>[root@localhost ~]# ls -l</code></p>
-<p>而长格式选项是英文完整单词，一般用两个减号调用，例如：</p>
-<p><code>[root@localhost ~]# ls --all</code></p>
-<p>一般情况下，短格式选项是长格式选项的缩写，也就是一个短格式选项会有对应的长格式选项。当然也有例外，比如 ls 命令的短格式选项 -l 就没有对应的长格式选项。所以具体的命令选项可以通过后面我们要学习的帮助命令来进行査询。</p>
-<h4> 2.6.2 参数的作用</h4>
-<p>参数是命令的操作对象，一般文件、目录、用户和进程等可以作为参数被命令操作。例如：</p>
-<p><code>[root@localhost ~]# ls -l anaconda-ks.cfg -rw-------.1 root root 1207 1 月 14 18:18 anaconda-ks.cfg</code></p>
-<p>但是为什么一开始 ls 命令可以省略参数？那是因为有默认参数。命令一般都需要加入参数，用于指定命令操作的对象是谁。如果可以省略参数，则一般都有默认参数。例如：</p>
-<p><code>[root@localhost ~]# ls anaconda-ks.cfg install.log install.log.syslog</code></p>
-<p>这个 ls 命令后面没有指定参数，默认参数是当前所在位置，所以会显示当前目录下的文件名。</p>
-<p>总结一下：命令的选项用于调整命令功能，而命令的参数是这个命令的操作对象。</p>
-]]></content:encoded>
-      <enclosure url="https://i0.hdslb.com/bfs/album/fa695b742d612fe2cae3a2058e37bf268db12a56.png" type="image/png"/>
     </item>
   </channel>
 </rss>
