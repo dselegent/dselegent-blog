@@ -1,0 +1,1 @@
+import{ab as t,G as a,H as c,E as e,S as r}from"./framework-09305b5d.js";const s={},_=e("h1",{id:"_09-【面向对象设计】",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#_09-【面向对象设计】","aria-hidden":"true"},"#"),r(" 09 【面向对象设计】")],-1),o=[_];function n(d,i){return a(),c("div",null,o)}const l=t(s,[["render",n],["__file","09.html.vue"]]);export{l as default};
