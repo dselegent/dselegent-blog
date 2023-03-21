@@ -2,4 +2,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://blog.dselegent.cf/sitemap.xml
+Sitemap: https://blog.dselegent.icu/sitemap.xml

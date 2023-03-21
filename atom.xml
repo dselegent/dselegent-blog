@@ -1,26 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://blog.dselegent.cf/atom.xsl"?>
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://blog.dselegent.icu/atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
-  <id>https://blog.dselegent.cf/</id>
+  <id>https://blog.dselegent.icu/</id>
   <title>dselegent-blog</title>
   <subtitle>开源工具、效率方法的自我提升笔记，记录并输出一切能让自己提升的知识。</subtitle>
   <author>
     <name>dselegent</name>
-    <uri>https://blog.dselegent.cf</uri>
+    <uri>https://blog.dselegent.icu</uri>
   </author>
-  <logo>https://blog.dselegent.cf/logo.png</logo>
+  <logo>https://blog.dselegent.icu/logo.png</logo>
   <rights>Copyright by dselegent</rights>
-  <updated>2023-03-21T14:38:07.630Z</updated>
+  <updated>2023-03-21T14:49:41.233Z</updated>
   <generator>vuepress-plugin-feed2</generator>
-  <link rel="self" href="https://blog.dselegent.cf/atom.xml"/>
-  <link rel="alternate" href="https://blog.dselegent.cf/"/>
+  <link rel="self" href="https://blog.dselegent.icu/atom.xml"/>
+  <link rel="alternate" href="https://blog.dselegent.icu/"/>
   <contributor>
     <name>dselegent</name>
-    <uri>https://blog.dselegent.cf</uri>
+    <uri>https://blog.dselegent.icu</uri>
   </contributor>
   <entry>
     <title type="text">01 【软件工程学概述】</title>
-    <id>https://blog.dselegent.cf/professional_knowledge/software_engineer/01.html</id>
-    <link href="https://blog.dselegent.cf/professional_knowledge/software_engineer/01.html"/>
+    <id>https://blog.dselegent.icu/professional_knowledge/software_engineer/01.html</id>
+    <link href="https://blog.dselegent.icu/professional_knowledge/software_engineer/01.html"/>
     <updated>2023-02-23T02:59:50.000Z</updated>
     <summary type="html"><![CDATA[<h1> 01 【软件工程学概述】</h1>
 <p>迄今为止，计算机系统已经经历了4个不同的发展阶段，但是，人们仍然没有彻底摆脱“软件危机”的困扰，软件已经成为限制计算机系统发展的瓶颈。</p>
@@ -347,19 +347,19 @@
 ]]></content>
     <author>
       <name>dselegent</name>
-      <uri>https://blog.dselegent.cf</uri>
+      <uri>https://blog.dselegent.icu</uri>
     </author>
     <contributor>
       <name>dselegent</name>
-      <uri>https://blog.dselegent.cf</uri>
+      <uri>https://blog.dselegent.icu</uri>
     </contributor>
     <published>2023-02-23T02:59:50.000Z</published>
     <rights>Copyright by dselegent</rights>
   </entry>
   <entry>
     <title type="text">02 【可行性研究】</title>
-    <id>https://blog.dselegent.cf/professional_knowledge/software_engineer/02.html</id>
-    <link href="https://blog.dselegent.cf/professional_knowledge/software_engineer/02.html"/>
+    <id>https://blog.dselegent.icu/professional_knowledge/software_engineer/02.html</id>
+    <link href="https://blog.dselegent.icu/professional_knowledge/software_engineer/02.html"/>
     <updated>2023-02-23T02:59:50.000Z</updated>
     <summary type="html"><![CDATA[<h1> 02 【可行性研究】</h1>
 <h2> 1.可行性研究的任务</h2>
@@ -612,19 +612,19 @@
 ]]></content>
     <author>
       <name>dselegent</name>
-      <uri>https://blog.dselegent.cf</uri>
+      <uri>https://blog.dselegent.icu</uri>
     </author>
     <contributor>
       <name>dselegent</name>
-      <uri>https://blog.dselegent.cf</uri>
+      <uri>https://blog.dselegent.icu</uri>
     </contributor>
     <published>2023-02-23T02:59:50.000Z</published>
     <rights>Copyright by dselegent</rights>
   </entry>
   <entry>
     <title type="text">03 【需求分析】</title>
-    <id>https://blog.dselegent.cf/professional_knowledge/software_engineer/03.html</id>
-    <link href="https://blog.dselegent.cf/professional_knowledge/software_engineer/03.html"/>
+    <id>https://blog.dselegent.icu/professional_knowledge/software_engineer/03.html</id>
+    <link href="https://blog.dselegent.icu/professional_knowledge/software_engineer/03.html"/>
     <updated>2023-02-23T02:59:50.000Z</updated>
     <summary type="html"><![CDATA[<h1> 03 【需求分析】</h1>
 <p>为了开发出真正满足用户需求的软件产品，首先必须知道用户的需求。对软件需求的深入理解是软件开发工作获得成功的前提条件，不论人们把设计和编码工作做得如何出色，不能真正满足用户需求的程序只会令用户失望，给开发者带来烦恼。</p>
@@ -751,19 +751,19 @@
 ]]></content>
     <author>
       <name>dselegent</name>
-      <uri>https://blog.dselegent.cf</uri>
+      <uri>https://blog.dselegent.icu</uri>
     </author>
     <contributor>
       <name>dselegent</name>
-      <uri>https://blog.dselegent.cf</uri>
+      <uri>https://blog.dselegent.icu</uri>
     </contributor>
     <published>2023-02-23T02:59:50.000Z</published>
     <rights>Copyright by dselegent</rights>
   </entry>
   <entry>
     <title type="text">04 【总体设计】</title>
-    <id>https://blog.dselegent.cf/professional_knowledge/software_engineer/04.html</id>
-    <link href="https://blog.dselegent.cf/professional_knowledge/software_engineer/04.html"/>
+    <id>https://blog.dselegent.icu/professional_knowledge/software_engineer/04.html</id>
+    <link href="https://blog.dselegent.icu/professional_knowledge/software_engineer/04.html"/>
     <updated>2023-02-23T02:59:50.000Z</updated>
     <summary type="html"><![CDATA[<h1> 04 【总体设计】</h1>
 <p>总体设计的基本目的就是回答“概括地说，系统应该如何实现”这个问题，因此，总体设计又称为概要设计或初步设计。</p>
@@ -942,19 +942,19 @@
 ]]></content>
     <author>
       <name>dselegent</name>
-      <uri>https://blog.dselegent.cf</uri>
+      <uri>https://blog.dselegent.icu</uri>
     </author>
     <contributor>
       <name>dselegent</name>
-      <uri>https://blog.dselegent.cf</uri>
+      <uri>https://blog.dselegent.icu</uri>
     </contributor>
     <published>2023-02-23T02:59:50.000Z</published>
     <rights>Copyright by dselegent</rights>
   </entry>
   <entry>
     <title type="text">05 【详细设计】</title>
-    <id>https://blog.dselegent.cf/professional_knowledge/software_engineer/05.html</id>
-    <link href="https://blog.dselegent.cf/professional_knowledge/software_engineer/05.html"/>
+    <id>https://blog.dselegent.icu/professional_knowledge/software_engineer/05.html</id>
+    <link href="https://blog.dselegent.icu/professional_knowledge/software_engineer/05.html"/>
     <updated>2023-02-23T02:59:50.000Z</updated>
     <summary type="html"><![CDATA[<h1> 05 【详细设计】</h1>
 <p>根本目标：确定应该怎样具体地实现所要求的系统。</p>
@@ -1220,19 +1220,19 @@
 ]]></content>
     <author>
       <name>dselegent</name>
-      <uri>https://blog.dselegent.cf</uri>
+      <uri>https://blog.dselegent.icu</uri>
     </author>
     <contributor>
       <name>dselegent</name>
-      <uri>https://blog.dselegent.cf</uri>
+      <uri>https://blog.dselegent.icu</uri>
     </contributor>
     <published>2023-02-23T02:59:50.000Z</published>
     <rights>Copyright by dselegent</rights>
   </entry>
   <entry>
     <title type="text">06 【软件测试】</title>
-    <id>https://blog.dselegent.cf/professional_knowledge/software_engineer/06.html</id>
-    <link href="https://blog.dselegent.cf/professional_knowledge/software_engineer/06.html"/>
+    <id>https://blog.dselegent.icu/professional_knowledge/software_engineer/06.html</id>
+    <link href="https://blog.dselegent.icu/professional_knowledge/software_engineer/06.html"/>
     <updated>2023-02-23T02:59:50.000Z</updated>
     <summary type="html"><![CDATA[<h1> 06 【软件测试】</h1>
 <h2> 1.软件测试基础</h2>
@@ -1694,19 +1694,19 @@ C2：B1 &amp; (E3=E4)**</p>
 ]]></content>
     <author>
       <name>dselegent</name>
-      <uri>https://blog.dselegent.cf</uri>
+      <uri>https://blog.dselegent.icu</uri>
     </author>
     <contributor>
       <name>dselegent</name>
-      <uri>https://blog.dselegent.cf</uri>
+      <uri>https://blog.dselegent.icu</uri>
     </contributor>
     <published>2023-02-23T02:59:50.000Z</published>
     <rights>Copyright by dselegent</rights>
   </entry>
   <entry>
     <title type="text">07 【面向对象方法学引论】</title>
-    <id>https://blog.dselegent.cf/professional_knowledge/software_engineer/07.html</id>
-    <link href="https://blog.dselegent.cf/professional_knowledge/software_engineer/07.html"/>
+    <id>https://blog.dselegent.icu/professional_knowledge/software_engineer/07.html</id>
+    <link href="https://blog.dselegent.icu/professional_knowledge/software_engineer/07.html"/>
     <updated>2023-02-23T02:59:50.000Z</updated>
     <summary type="html"><![CDATA[<h1> 07 【面向对象方法学引论】</h1>
 <p>​     面向对象技术强调在软件开发过程中面向客观世界或问题域中的事物，采用人类在认识客观世界的过程中普遍运用的思维方法，直观、自然地描述客观世界中的有关事物。</p>
@@ -2001,19 +2001,19 @@ C2：B1 &amp; (E3=E4)**</p>
 ]]></content>
     <author>
       <name>dselegent</name>
-      <uri>https://blog.dselegent.cf</uri>
+      <uri>https://blog.dselegent.icu</uri>
     </author>
     <contributor>
       <name>dselegent</name>
-      <uri>https://blog.dselegent.cf</uri>
+      <uri>https://blog.dselegent.icu</uri>
     </contributor>
     <published>2023-02-23T02:59:50.000Z</published>
     <rights>Copyright by dselegent</rights>
   </entry>
   <entry>
     <title type="text">08 【面向对象分析】</title>
-    <id>https://blog.dselegent.cf/professional_knowledge/software_engineer/08.html</id>
-    <link href="https://blog.dselegent.cf/professional_knowledge/software_engineer/08.html"/>
+    <id>https://blog.dselegent.icu/professional_knowledge/software_engineer/08.html</id>
+    <link href="https://blog.dselegent.icu/professional_knowledge/software_engineer/08.html"/>
     <updated>2023-02-23T02:59:50.000Z</updated>
     <summary type="html"><![CDATA[<h1> 08 【面向对象分析】</h1>
 <p>在面向对象分析中，主要由对象模型、动态模型和功能模型组成。</p>
@@ -2292,19 +2292,19 @@ C2：B1 &amp; (E3=E4)**</p>
 ]]></content>
     <author>
       <name>dselegent</name>
-      <uri>https://blog.dselegent.cf</uri>
+      <uri>https://blog.dselegent.icu</uri>
     </author>
     <contributor>
       <name>dselegent</name>
-      <uri>https://blog.dselegent.cf</uri>
+      <uri>https://blog.dselegent.icu</uri>
     </contributor>
     <published>2023-02-23T02:59:50.000Z</published>
     <rights>Copyright by dselegent</rights>
   </entry>
   <entry>
     <title type="text">09 【面向对象设计】</title>
-    <id>https://blog.dselegent.cf/professional_knowledge/software_engineer/09.html</id>
-    <link href="https://blog.dselegent.cf/professional_knowledge/software_engineer/09.html"/>
+    <id>https://blog.dselegent.icu/professional_knowledge/software_engineer/09.html</id>
+    <link href="https://blog.dselegent.icu/professional_knowledge/software_engineer/09.html"/>
     <updated>2023-02-23T02:59:50.000Z</updated>
     <summary type="html"><![CDATA[<h1> 09 【面向对象设计】</h1>
 ]]></summary>
@@ -2312,19 +2312,19 @@ C2：B1 &amp; (E3=E4)**</p>
 ]]></content>
     <author>
       <name>dselegent</name>
-      <uri>https://blog.dselegent.cf</uri>
+      <uri>https://blog.dselegent.icu</uri>
     </author>
     <contributor>
       <name>dselegent</name>
-      <uri>https://blog.dselegent.cf</uri>
+      <uri>https://blog.dselegent.icu</uri>
     </contributor>
     <published>2023-02-23T02:59:50.000Z</published>
     <rights>Copyright by dselegent</rights>
   </entry>
   <entry>
     <title type="text">10 【面向对象实现】</title>
-    <id>https://blog.dselegent.cf/professional_knowledge/software_engineer/10.html</id>
-    <link href="https://blog.dselegent.cf/professional_knowledge/software_engineer/10.html"/>
+    <id>https://blog.dselegent.icu/professional_knowledge/software_engineer/10.html</id>
+    <link href="https://blog.dselegent.icu/professional_knowledge/software_engineer/10.html"/>
     <updated>2023-02-23T02:59:50.000Z</updated>
     <summary type="html"><![CDATA[<h1> 10 【面向对象实现】</h1>
 ]]></summary>
@@ -2332,11 +2332,11 @@ C2：B1 &amp; (E3=E4)**</p>
 ]]></content>
     <author>
       <name>dselegent</name>
-      <uri>https://blog.dselegent.cf</uri>
+      <uri>https://blog.dselegent.icu</uri>
     </author>
     <contributor>
       <name>dselegent</name>
-      <uri>https://blog.dselegent.cf</uri>
+      <uri>https://blog.dselegent.icu</uri>
     </contributor>
     <published>2023-02-23T02:59:50.000Z</published>
     <rights>Copyright by dselegent</rights>
